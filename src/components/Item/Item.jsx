@@ -39,7 +39,7 @@ function Item(props){
     }
 
     const timeDue = () => {
-        if (Number(props.task.daysUntilDue) > 0){
+        if (Number(props.task.daysuntildue) > 0){
             return(`Due in ${props.task.daysuntildue} days`);
         }
         else if (Number(props.task.daysuntildue) == 0){
