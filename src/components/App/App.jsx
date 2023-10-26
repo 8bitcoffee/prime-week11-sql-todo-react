@@ -5,7 +5,6 @@ import Form from '../Form/Form';
 import List from '../List/List';
 
 function App () {
-
   const [todoList, setTodoList] = useState([]);
 
   const getTodoList = () => {
@@ -21,11 +20,12 @@ function App () {
 
   useEffect(() => {
     getTodoList();
-}, []);
+  }, []);
   
   return (
     <div id="app">
       <Header/>
+      <hr/>
       <Form getTodoList={getTodoList}/>
       <hr/>
       <List getTodoList={getTodoList} todoList={todoList}/>
@@ -33,5 +33,4 @@ function App () {
   );
 
 }
-
 export default App
