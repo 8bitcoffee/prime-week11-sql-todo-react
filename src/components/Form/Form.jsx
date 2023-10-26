@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import axios from 'axios';
+import './Form.css';
 
 function Form(props){
     const [title, setTitle] = useState("");
@@ -31,23 +32,19 @@ function Form(props){
 
     return(
         <form onSubmit={addTask}>
-            <label htmlFor='title'>Title:</label>
+            <label id='title-label' htmlFor='title'>Title: </label>
             <input id='title' type="text" maxLength="50" value={title} onChange={(e) => setTitle(e.target.value)}/>
-            <br/>
-            <label htmlFor='date'>Due Date:</label>
+            <label id='duedate-label' htmlFor='date'>Due Date: </label>
             <input id='duedate' type="date" value={duedate} onChange={(e) => setDuedate(e.target.value)}/>
-            <br/>
-            <label htmlFor='priority'>Priority:</label>
+            <label id='priority-label' htmlFor='priority'>Priority: </label>
             <select id='priority' value={priority} onChange={(e) => setPriority(e.target.value)}>
                 <option value={3}>Low</option>
                 <option value={2}>Medium</option>
                 <option value={1}>High</option>
             </select>
-            <br/>
-            <label htmlFor='description'>Description:</label>
-            <input id='description' type='text' maxLength="500" value={description} onChange={(e) => setDescription(e.target.value)}/>
-            <br/>
-            <button>Add Task</button>
+            <label id='description-label' htmlFor='description'>Description: </label>
+            <textarea id='description' type='text' maxLength="500" value={description} onChange={(e) => setDescription(e.target.value)}/>
+            <button id='add-task-btn'>Add Task</button>
         </form>
     )
 }

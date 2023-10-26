@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
+import './App.css';
 import axios from 'axios';
 import Header from '../Header/Header';
 import Form from '../Form/Form';
+import Counter from '../Counter/Counter';
 import List from '../List/List';
 
 function App () {
@@ -27,6 +29,8 @@ function App () {
       <Header/>
       <hr/>
       <Form getTodoList={getTodoList}/>
+      <hr/>
+      <Counter todoList={todoList}/>
       <hr/>
       <List getTodoList={getTodoList} todoList={todoList}/>
     </div>

@@ -1,0 +1,42 @@
+
+
+.task-Low, .task-Medium, .task-High, .task-complete{
+    display: block;
+    border:5px solid black;
+    padding: 5px;
+}
+
+.task-title {
+    text-decoration: underline;
+}
+
+.task-Low {
+    background-color: lightgreen;
+}
+
+.task-Medium {
+    background-color: lightyellow;
+}
+
+.task-High {
+    background-color: lightcoral;
+}
+
+.task-complete {
+    background-color: gray;
+}
+
+.Overdue {
+    border: 5px solid red;
+    background-color: lightcoral;
+}
+
+.Today {
+    border: 5px solid yellow;
+}
+
+button {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
